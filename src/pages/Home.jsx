@@ -1,5 +1,7 @@
 import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import { People } from "../components/People.jsx";
+import { Planets } from "../components/Planets.jsx";
+import { Vehicles } from "../components/Vehicles.jsx";
 
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React,{useEffect} from 'react'
@@ -40,6 +42,8 @@ console.log(store, "MY STORE!!!");
 	return (
 		<div className="text-center mt-5">
 			<People />
+			<Planets />
+			<Vehicles />
 			
 		</div>
 	);
