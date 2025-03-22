@@ -9,22 +9,24 @@ export const initialStore=()=>{
 
 export default function storeReducer(store, action = {}) {
   
-  if(action.type="set_people"){
+  if(action.type == "set_people"){
 // \\the return below is the action that gives it a new value
+    // console.log(action.payload, "PEOPLE SET!")
     return{
       ...store, 
       people: action.payload
     }
-  }
+  };
   
-  if(action.type="set_vehicles"){
+  if(action.type =="set_vehicles"){
+    // console.log(action.payload, "where is my payload????!!!!")
         return{
           ...store, 
           vehicles: action.payload
         }
-      }
+      };
 
-    if(action.type="set_planets"){
+    if(action.type =="set_planets"){
       return{
         ...store,
         planets: action.payload
