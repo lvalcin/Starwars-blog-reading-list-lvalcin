@@ -7,22 +7,31 @@ export const Vehicles = () => {
 
 
   return (
-<div className="container-fluid d-flex p-5">
- This is The Vehicle component
-        {store.vehicles.length >0?
-            store.vehicles.map(
-                (vehicles)=>{
-                    return(
-                        <div>
-                            <h3>{vehicles.name}</h3>
-                        </div>
-                    )
+        <div className="container">
+                <h1 className="text-danger">Vehicles</h1>
+                <div className= "d-flex gap-3 overflow-auto" style={{ whiteSpace: "nowrap", overflowX: "auto", scrollbarWidth: "thin" }}
+                    >
+                        {store.vehicles.length >0 ?
+                            store.people.map(
+                                (vehicles)=>{
+                                    return(
+                                        <div className="card" style={{width: "12 rem", flex: "0 0 auto" }}>
+                                            <img src={"https://placehold.co/400x200"} 
+                                            className="card-img-top" style={{objectFit: "cover" }}/>
+                                            <div className="card-body">
+                                                <h5 className="card-title">{vehicles.name}</h5>
+                                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <a href="#" className="btn btn-primary">Learn More</a>
+                                                <a href="#" className="btn">❤️</a>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                            )
+                            :
+                            "NO RIDES!"
+                        }       
+                    </div>
+                </div>
+                )
                 }
-            )
-            :
-            "NO RIDES"
-
-        }
-</div>
-  )
-}

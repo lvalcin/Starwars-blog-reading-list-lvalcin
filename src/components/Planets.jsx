@@ -6,24 +6,30 @@ export const Planets = () => {
   const {store, dispatch} =useGlobalReducer()
 
   return (
-<div className="container-fluid d-flex p-5">
-  <h1>Planets</h1>
-    
-      
-        { store.planets.length >0?
-          store.planets.map(
-            (planets)=>{
-              return(
-                <div>
-                   
-                  <h3>{planets.name}</h3>
-                </div>
-              )
-            }
-          )
-          :
-          "NO PLANETS"
-        }
+      <div className="container">
+        <h1 className="text-danger">Planets</h1>
+        <div className= "d-flex gap-3 overflow-auto" style={{ whiteSpace: "nowrap", overflowX: "auto", scrollbarWidth: "thin" }}>
+          {store.planets.length >0 ?
+            store.planets.map(
+                (planets)=>{
+                    return(
+                        <div className="card" style={{width: "12 rem", flex: "0 0 auto" }}>
+                            <img src={"https://placehold.co/400x200"} 
+                            className="card-img-top" style={{objectFit: "cover" }}/>
+                            <div className="card-body">
+                                <h5 className="card-title">{planets.name}</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" className="btn btn-primary">Learn More</a>
+                                <a href="#" className="btn">❤️</a>
+                            </div>
+                        </div>
+                    )
+                }
+            )
+            :
+            "WHAT WORLD!"
+        }       
+    </div>
 
 </div>
   )
