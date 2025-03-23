@@ -7,12 +7,15 @@ export const Planets = () => {
 
   return (
 <div className="container-fluid d-flex p-5">
-  This is the Planets component
+  <h1>Planets</h1>
+    
+      
         { store.planets.length >0?
           store.planets.map(
             (planets)=>{
               return(
                 <div>
+                   
                   <h3>{planets.name}</h3>
                 </div>
               )
