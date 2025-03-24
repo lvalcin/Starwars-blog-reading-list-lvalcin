@@ -12,7 +12,7 @@ export const Vehicles = () => {
                 <div className= "d-flex gap-3 overflow-auto" style={{ whiteSpace: "nowrap", overflowX: "auto", scrollbarWidth: "thin" }}
                     >
                         {store.vehicles.length >0 ?
-                            store.people.map(
+                            store.vehicles.map(
                                 (vehicles)=>{
                                     return(
                                         <div className="card" style={{width: "12 rem", flex: "0 0 auto" }}>
@@ -20,7 +20,10 @@ export const Vehicles = () => {
                                             className="card-img-top" style={{objectFit: "cover" }}/>
                                             <div className="card-body">
                                                 <h5 className="card-title">{vehicles.name}</h5>
-                                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                <p className="card-text">{vehicles.cost_in_credits}</p>
+                                                <p className="card-text">{vehicles.manufacturer}</p>
+                                                <p className="card-text">{vehicles.max_atmosphering_speed}</p>
+                                                <p className="card-text">{vehicles.model}</p>
                                                 <a href="#" className="btn btn-primary">Learn More</a>
                                                 <a href="#" className="btn">❤️</a>
                                             </div>

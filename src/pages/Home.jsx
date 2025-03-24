@@ -15,8 +15,8 @@ export const Home = () => {
 const getPeople =  ()=>{
 	fetch("https://swapi.dev/api/people")
 	.then((resp)=>resp.json())
-	.then((data)=>dispatch({type:"set_people",payload:data.results}))
-	// .catch((error) => console.error("Error fetching people:", error));
+	.then((data)=> dispatch({type:"set_people",payload:data.results}))
+	
 }
 
 const getVehicles= ()=>{

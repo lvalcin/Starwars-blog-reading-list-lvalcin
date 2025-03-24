@@ -20,7 +20,10 @@ export const People = () => {
                                 className="card-img-top" style={{objectFit: "cover" }}/>
                                 <div className="card-body">
                                     <h5 className="card-title">{people.name}</h5>
-                                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p className="card-text">{people.birth_year}</p>
+                                    <p className="card-text">{people.height}</p>
+                                    <p className="card-text">{people.eye_color}</p>
+                                    <p className="card-text">{people.hair_color}</p>
                                     <a href="#" className="btn btn-primary">Learn More</a>
                                     <a href="#" className="btn">❤️</a>
                                 </div>
