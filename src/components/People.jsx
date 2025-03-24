@@ -1,6 +1,8 @@
 
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React,{useEffect} from 'react'
+import { Link } from "react-router-dom";
+
 
 export const People = () => {
     
@@ -24,7 +26,9 @@ export const People = () => {
                                     <p className="card-text">{people.height}</p>
                                     <p className="card-text">{people.eye_color}</p>
                                     <p className="card-text">{people.hair_color}</p>
-                                    <a href="#" className="btn btn-primary">Learn More</a>
+                                    <Link to= "/SinglePage">
+                                    <button>Learn More</button>
+                                    </Link>
                                     <a href="#" className="btn">❤️</a>
                                 </div>
                             </div>

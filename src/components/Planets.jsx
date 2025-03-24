@@ -22,8 +22,14 @@ export const Planets = () => {
                                 <p className="card-text">{planets.orbital_period}</p>
                                 <p className="card-text">{planets.terrain}</p>
                                 <p className="card-text">{planets.gravity}</p>
+
+                                
                                 <a href="#" className="btn btn-primary">Learn More</a>
+                             
+
+                              
                                 <a href="#" className="btn">❤️</a>
+                                
                             </div>
                         </div>
                     )

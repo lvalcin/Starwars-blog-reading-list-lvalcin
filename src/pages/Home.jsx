@@ -5,6 +5,7 @@ import { Vehicles } from "../components/Vehicles.jsx";
 
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React,{useEffect} from 'react'
+import { SinglePage } from "./SinglePage.jsx";
 
 export const Home = () => {
 
@@ -44,6 +45,7 @@ console.log(store, "MY STORE!!!");
 			<People />
 			<Planets />
 			<Vehicles />
+			<SinglePage />
 			
 		</div>
 	);
