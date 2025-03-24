@@ -13,21 +13,21 @@ export const Home = () => {
 
 
 const getPeople =  ()=>{
-	fetch("https://www.swapi.tech/api/people")
+	fetch("https://swapi.dev/api/people")
 	.then((resp)=>resp.json())
 	.then((data)=>dispatch({type:"set_people",payload:data.results}))
 	// .catch((error) => console.error("Error fetching people:", error));
 }
 
 const getVehicles= ()=>{
-	fetch("https://www.swapi.tech/api/vehicles")
+	fetch("https://swapi.dev/api/vehicles")
 	.then((resp)=>resp.json())
 	.then((data)=> dispatch({type:"set_vehicles",payload:data.results}))
 }
 
 
 const getPlanets=()=>{
-	fetch("https://www.swapi.tech/api/planets")
+	fetch("https://swapi.dev/api/planets")
 	.then((resp)=>resp.json())
 	.then((data)=>dispatch({type:"set_planets",payload:data.results}))
 }
