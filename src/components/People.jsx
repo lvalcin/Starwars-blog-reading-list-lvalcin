@@ -15,7 +15,7 @@ export const People = () => {
         <div className= "d-flex gap-3 overflow-auto" style={{ whiteSpace: "nowrap", overflowX: "auto", scrollbarWidth: "thin" }}>
             {store.people.length >0 ?
                 store.people.map(
-                    (people)=>{
+                    (people, index)=>{
                         return(
                             <div className="card" style={{width: "12 rem", flex: "0 0 auto" }}>
                                 <img src={"https://placehold.co/400x200"} 
@@ -26,10 +26,18 @@ export const People = () => {
                                     <p className="card-text">{people.height}</p>
                                     <p className="card-text">{people.eye_color}</p>
                                     <p className="card-text">{people.hair_color}</p>
-                                    <Link to= "/SinglePage">
-                                    <button>Learn More</button>
+                                    <Link to= {"/solo/" + index}>
+                                        <button type="button" class="btn btn-outline-primary">
+                                            Learn More!
+                                        </button>
                                     </Link>
-                                    <a href="#" className="btn">❤️</a>
+                                    <button onClick = {()=>{
+                                        dispatch({type:"set_favorites", payload:people.name})
+                                    }}
+                                    // ((data)=>dispatch({type:"set_planets",payload:data.results}))
+                                    className="btn"> 
+                                        ❤️ 
+                                    </button>
                                 </div>
                             </div>
                         )

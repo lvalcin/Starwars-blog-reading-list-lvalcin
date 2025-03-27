@@ -1,5 +1,6 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React,{useEffect} from 'react'
+import { Link } from "react-router-dom";
 
 export const Planets = () => {
 
@@ -11,7 +12,7 @@ export const Planets = () => {
         <div className= "d-flex gap-3 overflow-auto" style={{ whiteSpace: "nowrap", overflowX: "auto", scrollbarWidth: "thin" }}>
           {store.planets.length >0 ?
             store.planets.map(
-                (planets)=>{
+                (planets, index)=>{
                     return(
                         <div className="card" style={{width: "12 rem", flex: "0 0 auto" }}>
                             <img src={"https://placehold.co/400x200"} 
@@ -22,9 +23,11 @@ export const Planets = () => {
                                 <p className="card-text">{planets.orbital_period}</p>
                                 <p className="card-text">{planets.terrain}</p>
                                 <p className="card-text">{planets.gravity}</p>
-
-                                
-                                <a href="#" className="btn btn-primary">Learn More</a>
+                                <Link to= {"/solo/" + index}>
+                                    <button type="button" class="btn btn-outline-primary">
+                                    Learn More
+                                    </button>
+                                </Link>
                              
 
                               

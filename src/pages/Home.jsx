@@ -3,9 +3,13 @@ import { People } from "../components/People.jsx";
 import { Planets } from "../components/Planets.jsx";
 import { Vehicles } from "../components/Vehicles.jsx";
 
+
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React,{useEffect} from 'react'
 import { SinglePage } from "./SinglePage.jsx";
+import { Favorites } from "../components/Favorites.jsx";
+
+
 
 export const Home = () => {
 
@@ -46,6 +50,8 @@ console.log(store, "MY STORE!!!");
 			<Planets />
 			<Vehicles />
 			<SinglePage />
+			<Favorites />
+		
 			
 		</div>
 	);

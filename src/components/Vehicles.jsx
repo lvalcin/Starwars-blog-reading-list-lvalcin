@@ -1,5 +1,6 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React,{useEffect} from 'react'
+import { Link } from "react-router-dom";
 
 export const Vehicles = () => {
 
@@ -13,7 +14,7 @@ export const Vehicles = () => {
                     >
                         {store.vehicles.length >0 ?
                             store.vehicles.map(
-                                (vehicles)=>{
+                                (vehicles, index)=>{
                                     return(
                                         <div className="card" style={{width: "12 rem", flex: "0 0 auto" }}>
                                             <img src={"https://placehold.co/400x200"} 
@@ -24,7 +25,11 @@ export const Vehicles = () => {
                                                 <p className="card-text">{vehicles.manufacturer}</p>
                                                 <p className="card-text">{vehicles.max_atmosphering_speed}</p>
                                                 <p className="card-text">{vehicles.model}</p>
-                                                <a href="#" className="btn btn-primary">Learn More</a>
+                                                <Link to= {"/solo/" + index}>
+                                                    <button type="button" class="btn btn-outline-primary">
+                                                        Learn More
+                                                    </button>
+                                                </Link>
                                                 <a href="#" className="btn">❤️</a>
                                             </div>
                                         </div>

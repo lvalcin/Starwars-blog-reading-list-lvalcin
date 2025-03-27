@@ -1,9 +1,10 @@
 export const initialStore=()=>{
   return{
-    //3 variables fro starwars API (people,vehicles, planets)
+    //3 variables from starwars API (people,vehicles, planets)
     people:[],
     vehicles:[],
-    planets:[]
+    planets:[],
+    favorites: []
   }
 }
 
@@ -32,10 +33,17 @@ export default function storeReducer(store, action = {}) {
         planets: action.payload
       }
     }
+
+    if(action.type =="set_favorites"){
+      return{
+        ...store,
+        favorites: [store.favorites,action.payload]
+      }
+    }
   
   
   
-  
+    // dispatch({type:"set_favorites", payload:store.people})
   
   
   
