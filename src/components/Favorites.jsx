@@ -9,14 +9,23 @@ export const Favorites = () => {
     return (
     <div>
         <Link to="/demo">
-        <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div className="dropdown">
+        <button
+            className="btn btn-primary dropdown-toggle" 
+            type="button" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false"
+        >
             Favorites
         </button>
-        <ul class="dropdown-menu">
+        <ul className="dropdown-menu">
             {store.favorites.map((item)=>{
                 return(
-                        <li><a class="dropdown-item" href="#">{item}</a></li>
+                        <li>
+                            <a className="dropdown-item" href="#">
+                                {item}
+                            </a>
+                        </li>
                 )
             })
         }

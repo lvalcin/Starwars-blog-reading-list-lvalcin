@@ -8,7 +8,7 @@ export const Vehicles = () => {
 
 
   return (
-        <div className="container">
+        <div className="container pt-5">
                 <h1 className="text-danger">Vehicles</h1>
                 <div className= "d-flex gap-3 overflow-auto" style={{ whiteSpace: "nowrap", overflowX: "auto", scrollbarWidth: "thin" }}
                     >

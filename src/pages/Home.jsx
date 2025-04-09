@@ -44,7 +44,7 @@ useEffect(()=>{
 console.log(store, "MY STORE!!!");
 
 	return (
-		<div className="text-center mt-5">
+		<div className="text-center mt-5 ">
 			<People />
 			<Planets />
 			<Vehicles />	
