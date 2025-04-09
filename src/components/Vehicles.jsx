@@ -25,12 +25,17 @@ export const Vehicles = () => {
                                                 <p className="card-text">{vehicles.manufacturer}</p>
                                                 <p className="card-text">{vehicles.max_atmosphering_speed}</p>
                                                 <p className="card-text">{vehicles.model}</p>
-                                                <Link to= {"/solo/" + index}>
+                                                <Link to= {"/soloRide/" + index}>
                                                     <button type="button" class="btn btn-outline-primary">
                                                         Learn More
                                                     </button>
                                                 </Link>
-                                                <a href="#" className="btn">❤️</a>
+                                                <button onClick = {()=>{
+                                                    dispatch({type:"set_favorites", payload:vehicles.name})
+                                                    }}
+                                                    className="btn"> 
+                                                    ❤️ 
+                                                </button>
                                             </div>
                                         </div>
                                     )

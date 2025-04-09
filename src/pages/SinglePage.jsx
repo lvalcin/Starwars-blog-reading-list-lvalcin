@@ -15,8 +15,8 @@ export const SinglePage = () => {
     return (
         <div>
             THIS IS THE SINGLE PAGE
-       I clicked on {soloPerson?.name}
+    {soloPerson?.name}
         </div>
-
+        // location.pathname.split("/")
     )
 };

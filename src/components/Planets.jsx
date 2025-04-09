@@ -23,15 +23,17 @@ export const Planets = () => {
                                 <p className="card-text">{planets.orbital_period}</p>
                                 <p className="card-text">{planets.terrain}</p>
                                 <p className="card-text">{planets.gravity}</p>
-                                <Link to= {"/solo/" + index}>
+                                <Link to= {"/soloPlanet/" + index}>
                                     <button type="button" class="btn btn-outline-primary">
                                     Learn More
                                     </button>
                                 </Link>
-                             
-
-                              
-                                <a href="#" className="btn">❤️</a>
+                                <button onClick = {()=>{
+                                    dispatch({type:"set_favorites", payload:planets.name})
+                                    }}
+                                    className="btn"> 
+                                        ❤️ 
+                                    </button>
                                 
                             </div>
                         </div>

@@ -6,8 +6,7 @@ import { Vehicles } from "../components/Vehicles.jsx";
 
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import React,{useEffect} from 'react'
-import { SinglePage } from "./SinglePage.jsx";
-import { Favorites } from "../components/Favorites.jsx";
+
 
 
 
@@ -48,11 +47,7 @@ console.log(store, "MY STORE!!!");
 		<div className="text-center mt-5">
 			<People />
 			<Planets />
-			<Vehicles />
-			<SinglePage />
-			<Favorites />
-		
-			
+			<Vehicles />	
 		</div>
 	);
 }; 
